@@ -4,8 +4,6 @@ import java.util.Scanner;
         private String bookname,authorName,publisher;
         private long ISBN;
 
-public Book() {
-}
 
 public Book(String bookname,long ISBN,String authorName,String publisher) {
             this.bookname=bookname;
