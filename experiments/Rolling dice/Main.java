@@ -2,20 +2,16 @@ import java.util.Random;
 public class Main{
 	public static void main( String[] args){
 		Random randomNumbers = new Random();
-		int[][] count=new int[6][6];
+		int count=0;
 		int dice1,dice2; 
 		for ( int roll = 1; roll <= 10000; roll++ )
 		{ 
 			dice1 = 1 + randomNumbers.nextInt( 6 ); 
 			dice2 = 1 + randomNumbers.nextInt( 6 );
-			count[dice1-1][dice2-1]++;
+			if (dice1 == dice2*2 || dice1*2==dice2) {
+				count += 1;}
 		} 
-		System.out.println("Each pair has rolled the following number of times");				
-                for(int i=0;i<6;i++)
-		{
-			for(int j=0;j<6;j++)
-				System.out.print("pair "+(i+1)+","+(j+1)+"="+count[i][j]+"  ");
-			System.out.println( );
-		}
+		System.out.println("doubles are printed count = "+count);
+		
 	} 
 }
